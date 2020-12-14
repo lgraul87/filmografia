@@ -4,20 +4,20 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Menu Entrada</title>
 </head>
-<body>
+<body style="background-color: #D0F2E0;">
 <h2>Bienvenido a la APP-Filmografia</h2>
 
 
-	<a href="01_entrar.htm">
-		<button>Entrar</button>
-	</a>
-	<a href="02_demo.htm">
-		<button>Demo</button>
-	</a>
-	<a href="03_salir.htm">
-		<button>Salir</button>
+	<a href="01_info.htm">
+		<button>Info</button>
+	</a> <br><br>
+	<a href="02_formularioConsultarDirectores.htm">
+		<button>Consultar directores</button>
+	</a><br><br>
+	<a href="03_login.htm">
+		<button>Login</button>
 	</a>
 </body>
 </html>
