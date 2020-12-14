@@ -6,16 +6,16 @@
 <meta charset="ISO-8859-1">
 <title>Menu Entrada</title>
 </head>
-<body>
+<body style="background-color: #D0F2E0;">
 <h2>Bienvenido a la APP-Filmografia</h2>
 
 
 	<a href="01_info.htm">
 		<button>Info</button>
-	</a>
-	<a href="02_consultarDirectores.htm">
+	</a> <br><br>
+	<a href="02_formularioConsultarDirectores.htm">
 		<button>Consultar directores</button>
-	</a>
+	</a><br><br>
 	<a href="03_login.htm">
 		<button>Login</button>
 	</a>

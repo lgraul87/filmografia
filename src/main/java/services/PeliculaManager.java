@@ -7,6 +7,6 @@ import domain.Pelicula;
 
 public interface PeliculaManager extends Serializable{
 
-	public List<Pelicula>  getPeliculas();
+	public List<Pelicula>  getPeliculas(String director);
 
 }

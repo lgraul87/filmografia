@@ -38,6 +38,7 @@ public class ServletController {
 	
 	@RequestMapping(value = "/02_formularioConsultarDirectores.htm")
 	public ModelAndView handleRequest2(HttpServletRequest request, HttpServletResponse response) {
+		
 		return new ModelAndView("02_formularioConsultarDirectores");
 	}
 	
@@ -46,8 +47,16 @@ public class ServletController {
 	public ModelAndView handleRequest3(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		Map<String, Object> myModel = new HashMap<String, Object>();
-		myModel.put("peliculas", this.peliculaManager.getPeliculas());
+		
+		String director = request.getParameter("director");
+		myModel.put("peliculas", this.peliculaManager.getPeliculas(director));
 
-		return new ModelAndView("03_MostrarPeliculasDirectores");
+		myModel.put("director", director);
+
+
+		logger.info("Devolviendo mostrarPeliculas view");
+
+		return new ModelAndView("03_MostrarPeliculasDirectores", "model", myModel);
+
 	}
 }
