@@ -4,14 +4,11 @@
 <%@ page session="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Mostrar peliculas</title>
+<title>Lista de directores</title>
 <style type="text/css">
 table {
 	align-content: center;
@@ -38,35 +35,32 @@ h1 {
 </style>
 </head>
 <body style="background-color: #D0F2E0;">
-	<h2>Peliculas</h2>
+	<h2>Directores Consultados</h2>
+
 	<table border=1>
 		<tbody>
 			<tr>
-				<th>PELICULA</th>
-				<th>ACTOR</th>
+				<th>DIRECTOR</th>
 
 			</tr>
-				<c:forEach items="${model.peliculas}" var="pelicula">
-			<tr>
+			<c:forEach items="${model.directores}" var="directores">
+				<tr>
 
-					<td><c:out value="${pelicula}" /></td>
-					<td><c:out value="${model.director}" /></td>
-			</tr>
+					<td><c:out value="${directores}" /></td>
+				</tr>
 			</c:forEach>
 
 		</tbody>
 	</table>
-	<br><br>
-	<a href="02_formularioConsultarDirectores.htm">
-		<button>Realizar otra consulta</button>
+	<br>
+	<br>
+	<a href="05_PeliculasDirectoresNuevaSesion.htm">
+		<button>Nueva consulta (Nueva sesion)</button>
 	</a>
-	<br><br>
-	<a href="04_DirectoresConsultados.htm">
-		<button>Finalizar</button>
-	</a>
-	<br><br>
+	<br>
+	<br>
 	<a href="00_menuEntrada.htm">
-		<button>Atras</button>
+		<button>Inicio</button>
 	</a>
 </body>
 </html>

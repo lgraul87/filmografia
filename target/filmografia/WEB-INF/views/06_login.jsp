@@ -4,14 +4,13 @@
 <%@ page session="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Mostrar peliculas</title>
+<title>LOGIN</title>
 <style type="text/css">
 table {
 	align-content: center;
@@ -38,35 +37,18 @@ h1 {
 </style>
 </head>
 <body style="background-color: #D0F2E0;">
-	<h2>Peliculas</h2>
-	<table border=1>
-		<tbody>
+	<form:form method="POST" action="07_loginUsuario.htm">
+		<table>
 			<tr>
-				<th>PELICULA</th>
-				<th>ACTOR</th>
-
+				<td><input type="text" name="usuario" /></td>
 			</tr>
-				<c:forEach items="${model.peliculas}" var="pelicula">
 			<tr>
-
-					<td><c:out value="${pelicula}" /></td>
-					<td><c:out value="${model.director}" /></td>
+				<td><input type="text" name="contrasenia" /></td>
 			</tr>
-			</c:forEach>
 
-		</tbody>
-	</table>
-	<br><br>
-	<a href="02_formularioConsultarDirectores.htm">
-		<button>Realizar otra consulta</button>
-	</a>
-	<br><br>
-	<a href="04_DirectoresConsultados.htm">
-		<button>Finalizar</button>
-	</a>
-	<br><br>
-	<a href="00_menuEntrada.htm">
-		<button>Atras</button>
-	</a>
+		</table>
+		<br>
+		<input type="submit" value="Enviar">
+	</form:form>
 </body>
 </html>

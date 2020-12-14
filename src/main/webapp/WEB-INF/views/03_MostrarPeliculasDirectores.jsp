@@ -61,6 +61,10 @@ h1 {
 		<button>Realizar otra consulta</button>
 	</a>
 	<br><br>
+	<a href="04_DirectoresConsultados.htm">
+		<button>Finalizar</button>
+	</a>
+	<br><br>
 	<a href="00_menuEntrada.htm">
 		<button>Atras</button>
 	</a>

@@ -42,12 +42,12 @@ h1 {
 	<form:form method="POST" action="03_MostrarPeliculasDirectores.htm">
 		<table>
 			<tr>
-				<td><input type="text" name="actor" /></td>
+				<td><input type="text" name="director" /></td>
 			</tr>
 
 		</table>
 		<br>
-		<input type="submit" value="Execute">
+		<input type="submit" value="Enviar">
 	</form:form>
 	<br>
 	<br>
